@@ -16,10 +16,7 @@ class _SecondState extends State<Second> {
       builder: (context, numberProviderModel, child) => Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            int last = numberProviderModel.numbers.last;
-            setState(() {
-              numberProviderModel.numbers.add(last + 1);
-            });
+            numberProviderModel.add();
           },
           child: const Icon(Icons.add),
         ),

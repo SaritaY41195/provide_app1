@@ -17,10 +17,7 @@ class _HomeState extends State<Home> {
       builder: (context, numbersProviderModel, child) => Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            int last = numbersProviderModel.numbers.last;
-            setState(() {
-              numbersProviderModel.numbers.add(last + 1);
-            });
+            numbersProviderModel.add();
           },
           child: const Icon(Icons.add),
         ),
@@ -33,7 +30,9 @@ class _HomeState extends State<Home> {
             children: [
               Text(
                 numbersProviderModel.numbers.last.toString(),
-                style: const TextStyle(fontSize: 20),
+                style: const TextStyle(
+                  fontSize: 20,
+                ),
               ),
               Expanded(
                 child: ListView.builder(

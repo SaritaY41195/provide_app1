@@ -29,9 +29,11 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               Text(
-                numbersProviderModel.numbers.last.toString(),
+                "Last Counter  ${numbersProviderModel.numbers.last}",
                 style: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
                 ),
               ),
               Expanded(

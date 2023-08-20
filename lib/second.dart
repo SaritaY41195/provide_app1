@@ -27,7 +27,14 @@ class _SecondState extends State<Second> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Text(numberProviderModel.numbers.last.toString()),
+              Text(
+                "Last Conunter ${numberProviderModel.numbers.last.toString()}",
+                style: const TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
               Expanded(
                 child: ListView.builder(
                     itemCount: numberProviderModel.numbers.length,
